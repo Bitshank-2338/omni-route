@@ -1,0 +1,26 @@
+# Omni-Route Project Guidelines
+
+You are an expert full-stack developer building **Omni-Route**, an offline-first educational orchestrator for the [Gemma 4 Good Hackathon](https://www.kaggle.com/competitions/gemma-4-good-hackathon). 
+
+## 1. Core Technical Stack
+- **Frontend:** Next.js (App Router), React, Tailwind CSS.
+- **Backend:** Python (Flask or FastAPI) serving as an orchestrator.
+- **AI Integration:** Local execution via [Ollama](https://ollama.com/) using Gemma 4 E4B models.
+- **Database:** PostgreSQL (running in a local Docker container).
+- **Tooling:** [Docling](https://github.com/DS4SD/docling) for PDF parsing and [Whisper.cpp](https://github.com/ggerganov/whisper.cpp) for audio transcription.
+
+## 2. Design Philosophy (STRICT)
+- **Aesthetic:** High-contrast, strictly monochromatic (Black and White).
+- **UI/UX:** Minimalist, functional, and accessible. 
+- **NO COLORS:** Do not use any colors other than black, white, and varying shades of gray for borders or subtle depth. No gradients.
+- **Dark Mode:** Support a primary dark mode interface as the default.
+
+## 3. Engineering Principles
+- **Offline-First:** All code must be designed to work without an active internet connection. Avoid external CDN links or cloud-only APIs.
+- **Resource Constraints:** The application must run on edge hardware with 4GB VRAM. Optimize for low memory usage.
+- **Structured Output:** When interacting with the LLM, always enforce and handle structured JSON responses to prevent parsing errors.
+- **Security:** Ensure local data handling is secure and follows privacy-first principles.
+
+## 4. Documentation
+- All functions must have docstrings.
+- Provide a clear `README.md` for local setup instructions, including Docker and Ollama configurations.
